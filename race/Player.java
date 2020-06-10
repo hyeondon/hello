@@ -4,7 +4,9 @@ public class Player {
 	private String name; 
 	private int record;
 	
-		public void setName(String name) { //키워드(){} Condition
+	
+	
+		public void setName(String name) {
 			this.name = name;
 		}
 		public String getName() { 
@@ -20,7 +22,7 @@ public class Player {
 		}
 	
 	void printStates() {
-		System.out.println("이름:"+name+",기록:"+record);
+		System.out.println("이름:"+name+",기록:"+record+"초");
 	}
 	
 }
