@@ -1,57 +1,24 @@
 package race;
-
 import java.util.Scanner;
 
+public class PlayerApp { // í´ë˜ìŠ¤í˜•íƒœ, í‚¤ì›Œë“œ ì•„ì´ë”” {}
+	public static void main(String[] args) { // ë©”ì†Œë“œí˜•íƒœ, í‚¤ì›Œë“œ ì•„ì´ë””() {}
+		Scanner scanner = new Scanner(System.in); // ;ìœ¼ë¡œ ëë‚˜ë©´ statement 
+		Player[] players = new Player[3];
 
-
-public class PlayerApp { 
-	public static void main(String[] args) { 
-		Scanner scanner = new Scanner(System.in); 
-		Player[] players = new Player[3]; //Âü°¡¹øÈ£ 
-
-		for(int i=0; i<players.length; i++) { 
+		for(int i=0; i<3; i++) { // {ìœ¼ë¡œ ëë‚˜ë©´ cf statement 
 			Player player = new Player();
-			
-			System.out.println("Player ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+
+			System.out.println("Player ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 			player.setName(scanner.next()); 
-			//String name = scanner.next();
-			//player.setName(name);
-			
-			System.out.println("100M ±â·Ï: ");
+
+			System.out.println("ê¸°ë¡ì„ ì…ë ¥í•˜ì„¸ìš”");
 			player.setRecord(scanner.nextInt());
-			//int record = scanner.nextInt();
-			//player.setRecord(record);
-			
+
 			players[i] = player;
 		}
-			for(int i=0; i<players.length; i++) {
+			for(int i=0; i<3; i++) {
 				players[i].printStates();
 			}
-			Player[] ranking = new Player[3]; 
-			if(players[0].gerRecord() < players[1].gerRecord()) {
-				if(players[0].gerRecord() < players[2].gerRecord()) {
-					ranking[0] = players[0];
-				}else {
-					ranking[0] = players[2];
-				}
-			}else {
-				if(players[1].gerRecord() < players[2].gerRecord()) {
-					ranking[0] = players[1];
-				} else {
-					ranking[0] = players[2];
-				}
-			}
-			System.out.println("1µîÀº "+ ranking[0].getName());
 	}
 }
-
-
-/**
- if(players[0].gerRecord() < players[1].gerRecord()) {
-				System.out.println(players[0].getName()
-						+"ÀÌ"+players[1].getName()+"º¸´Ù ºü¸£´Ù");
-			} else {
-				System.out.println(players[1].getName()
-						+"ÀÌ"+players[0].getName()+"º¸´Ù ºü¸£´Ù");
- **/
- 

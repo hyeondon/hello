@@ -5,31 +5,31 @@ import java.util.Scanner;
 		public static void main(String[] args) {
 			Scanner scanner = new Scanner(System.in);
 			Student[] students = new Student[1];
-			
+
 			for(int i=0; i<students.length; i++) {
 				Student student = new Student();
-				System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+				System.out.println("ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš”: ");
 				student.setName(scanner.next());
-				
-				System.out.println("±¹¾îÁ¡¼ö: ");
+
+				System.out.println("êµ­ì–´ì ìˆ˜: ");
 				student.setKor(scanner.nextInt());
-					
-				System.out.println("¿µ¾îÁ¡¼ö: ");
+
+				System.out.println("ì˜ì–´ì ìˆ˜: ");
 				student.setEng(scanner.nextInt());
-				
-				System.out.println("¼öÇÐÁ¡¼ö: ");
+
+				System.out.println("ìˆ˜í•™ì ìˆ˜: ");
 				student.setMath(scanner.nextInt());
 
 				student.sum();
-				
+
 				student.avg(); 
-				
-				
+
+
 				students[i] = student;
 			}
-			
+
 				for(int i=0; i<students.length; i++) {
 					students[i].printStates();
 				}
 		}
-	}
+	} 

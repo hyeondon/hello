@@ -3,26 +3,26 @@ package race;
 public class Player {
 	private String name; 
 	private int record;
-	
-	
-	
+
 		public void setName(String name) {
+			
 			this.name = name;
 		}
 		public String getName() { 
 			return this.name;
 		}
-		
+
 		public void setRecord(int record) {
 			this.record = record;
 		}
-		
+
 		public int gerRecord() {
 			return this.record;
 		}
-	
+
 	void printStates() {
-		System.out.println("¿Ã∏ß:"+name+",±‚∑œ:"+record+"√ ");
+		System.out.println("Ïù¥Î¶Ñ:"+name+",Í∏∞Î°ù:"+record+"Ï¥à");
 	}
-	
+ 
 }
+

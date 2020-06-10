@@ -5,22 +5,23 @@ import java.util.Scanner;
 		public static void main(String[] args) {
 			Scanner scanner = new Scanner(System.in);
 			Person[] persons = new Person[3];
-			
+
 			for(int i=0; i<3; i++) {
 				Person person = new Person();
-				System.out.println("ÀÌ¸§ÀÌ ¹¹¿¹¿ä?");
+				System.out.println("ì´ë¦„ì´ ë­ì˜ˆìš”?");
 				person.name = scanner.next();
-				
-				System.out.println("³ªÀÌ°¡ ¾î¶»°Ô µÇ¼¼¿ä?");
+
+				System.out.println("ë‚˜ì´ê°€ ì–´ë–»ê²Œ ë˜ì„¸ìš”?");
 				person.age = scanner.nextInt();
-				
-				System.out.println("Å°´Â ¾î¶»°Ô µÇ¼¼¿ä?");
+
+				System.out.println("í‚¤ëŠ” ì–´ë–»ê²Œ ë˜ì„¸ìš”?");
 				person.height = scanner.nextFloat();
-				
+
 				persons[i] = person;		
 			}
 			for(int i=0; i<3; i++) {
 				persons[i].printStates();
 			}
 		}
-	}
+	} 
+	

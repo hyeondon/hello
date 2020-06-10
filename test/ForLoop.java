@@ -2,14 +2,13 @@ package test;
 
 public class ForLoop {
 	public static void main(String[] args) {
-		// for(ÃÊ±â°ª; Á¶°ÇºÎ; Áõ°¨½Ä)
+		// for(ì´ˆê¸°ê°’; ì¡°ê±´ë¶€; ì¦ê°ì‹)
 		for(int i=1; i<=5; i++) {
 		// i <= 1,2,3,4,5
-		// i °¡ 6ÀÌ µÇ¸é Á¾·á 
+		// i ê°€ 6ì´ ë˜ë©´ ì¢…ë£Œ 
 			System.out.println(1);
-			// i++ (i°¡ 1¾¿ Áõ°¡) 
+			// i++ (iê°€ 1ì”© ì¦ê°€) 
 		}
 	}
 }
 
-	

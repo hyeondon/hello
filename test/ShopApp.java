@@ -5,29 +5,29 @@ public class ShopApp {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Shop[] shops = new Shop[3];
-		
+
 		for(int i=0; i<shops.length; i++) {
 			Shop shop = new Shop();
-			
-			System.out.println("°í°´ 3¸íÀÌ ÁÙÀ» ¼¹¾î¿ä.");
-			
-			System.out.println("ÀÌ¸§:");
+
+			System.out.println("ê³ ê° 3ëª…ì´ ì¤„ì„ ì„°ì–´ìš”.");
+
+			System.out.println("ì´ë¦„:");
 			shop.setName(scanner.next());
-			
-			System.out.println("Æù°¡°Ý:");
+
+			System.out.println("í°ê°€ê²©:");
 			shop.setPhone(scanner.nextInt());
-			
-			System.out.println("tv°¡°Ý:");
+
+			System.out.println("tvê°€ê²©:");
 			shop.setTv(scanner.nextInt());
-			
-			System.out.println("ÄÄÇ»ÅÍ°¡°Ý:");
+
+			System.out.println("ì»´í“¨í„°ê°€ê²©:");
 			shop.setComputer(scanner.nextInt());
-			
-			System.out.println("OOO´Ô °áÁ¦ÇÏ½Ç ÃÑ ±Ý¾×Àº ? ");
-			
-		
+
+			System.out.println("OOOë‹˜ ê²°ì œí•˜ì‹¤ ì´ ê¸ˆì•¡ì€ ? ");
+
+
 			shop.sum();
-			
+
 			shops[i] = shop;
 		}
 			for(int i=0; i<shops.length; i++) {

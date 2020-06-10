@@ -1,11 +1,11 @@
 package test;
 
 public class Test {
-	//¸Ş¼Òµå´Â ¹İµå½Ã ÀÌ¸§ÀÌ ÀÖ¾î¾ß ÇÑ´Ù.
-	//()´Â ÆÄ¶ó¹ÌÅÍ 
+	//ë©”ì†Œë“œëŠ” ë°˜ë“œì‹œ ì´ë¦„ì´ ìˆì–´ì•¼ í•œë‹¤.
+	//()ëŠ” íŒŒë¼ë¯¸í„° 
 	void main() {  
-		
-		// ()¸¦ Condition À¸·Î ºÎ¸¥´Ù
+
+		// ()ë¥¼ Condition ìœ¼ë¡œ ë¶€ë¥¸ë‹¤
 		//if() {} 
 		//switch() {}
 		//while() {}
@@ -13,8 +13,8 @@ public class Test {
 	}
 }
 
-// Å°¿öµå ¾ÆÀÌµğ{} class 
-// Å°¿öµå ¾ÆÀÌµğ() {} Methods, ()´ÂParameter zone 
-// Å°¿öµå(){} Condition
-// ;À¸·Î ³¡³ª´Â °ÍÀº statement 
-// {·Î ³¡³ª´Â °ÍÀº cf statement ¿¹)for¹®
+// í‚¤ì›Œë“œ ì•„ì´ë””{} class 
+// í‚¤ì›Œë“œ ì•„ì´ë””() {} Methods, ()ëŠ”Parameter zone 
+// í‚¤ì›Œë“œ(){} Condition
+// ;ìœ¼ë¡œ ëë‚˜ëŠ” ê²ƒì€ statement 
+// {ë¡œ ëë‚˜ëŠ” ê²ƒì€ cf statement ì˜ˆ)forë¬¸ 

@@ -1,11 +1,11 @@
 package test;
-	
+
 	public class Person{
 		String name;
 		int age;
 		float height;
-		
+
 		void printStates() {
-			System.out.println("�̸�: "+name+",����: "+age+",Ű: "+height);
+			System.out.println("ÀÌ¸§: "+name+",³ªÀÌ: "+age+",Å°: "+height);
 		}
-	}
+	} 

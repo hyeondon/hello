@@ -4,47 +4,47 @@ package test;
 		private String name;
 		private int kor,eng,math,sum;
 		float avg;
-		
-		//ÀÌ¸§ 
+
+		//ì´ë¦„ 
 		public void setName(String name) {
 			this.name = name;
 		}
-		
+
 		public String gerName() {
 			return this.name;
 		}
-		//±¹¾î 
+		//êµ­ì–´ 
 		public void setKor(int kor) {
 			this.kor = kor;
 		}
 		public int getKor() {
 			return this.kor;
 		}
-		//¿µ¾î 
+		//ì˜ì–´ 
 		public void setEng(int eng) {
 			this.eng = eng;
 		}
 		public int getEng() {
 			return this.eng;
 		}
-		//¼öÇĞ 
+		//ìˆ˜í•™ 
 		public void setMath(int math) {
 			this.math = math;
 		}
 		public int getMath() {
 			return this.math;
 		}
-		
+
 		public void sum() {
 			this.sum = this.kor+this.eng+this.math;
 		}
-		
+
 		public void  avg() {
 			 this.avg = this.sum / 3;
 		}
-		
+
 		void printStates() {
-		System.out.println("ÀÌ¸§:"+ name +",±¹¾î:"+ kor +",¿µ¾î:"+ eng +",¼öÇĞ:"+ math +"ÇÕ°è:"+ sum +",Æò±Õ:"+avg);
+		System.out.println("ì´ë¦„:"+ name +",êµ­ì–´:"+ kor +",ì˜ì–´:"+ eng +",ìˆ˜í•™:"+ math +"í•©ê³„:"+ sum +",í‰ê· :"+avg);
 		}
 
-	}
+	} 

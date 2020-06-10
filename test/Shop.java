@@ -1,47 +1,46 @@
 package test;
 
 	public class Shop{
-		
+
 		 private String name;
 		 private int phone,tv,computer,sum,total;
-		
+
 		public void setName(String name) {
 			this.name = name;
 		}
 		public String getName() {
 			return this.name;
 		}
-		
+
 		public void setPhone(int phone) {
 			this.phone = phone;
 		}
 		public int getPhone() {
 			return this.phone;
 		}
-		
+
 		public void setTv(int tv) {
 			this.tv = tv;
 		}
 		public int getTv() {
 			return this.tv;
 		}
-		
+
 		public void setComputer(int computer) {
 			this.computer = computer;
 		}
 		public int getComputer() {
 		return this.computer;
 		}
-		
+
 		public void sum() {
 			this.sum = this.phone + this.tv + this.computer;
-			
-		
+
+
 		}																															
 		void printStates() {
-			System.out.println("ÀÌ¸§:"+name+ ",Æù°¡°İ:"+phone+",tv°¡°İ:"+tv+",ÄÄÇ»ÅÍ°¡°İ:"+computer);
-			System.out.println("È«±æµ¿´Ô °áÁ¦ÇÏ½Ç ÃÑ ±İ¾×Àº? "+ sum +" ÀÔ´Ï´Ù");
-			
+			System.out.println("ì´ë¦„:"+name+ ",í°ê°€ê²©:"+phone+",tvê°€ê²©:"+tv+",ì»´í“¨í„°ê°€ê²©:"+computer);
+			System.out.println("í™ê¸¸ë™ë‹˜ ê²°ì œí•˜ì‹¤ ì´ ê¸ˆì•¡ì€? "+ sum +" ì…ë‹ˆë‹¤");
+
 		}
 		}
-	

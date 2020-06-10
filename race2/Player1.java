@@ -17,6 +17,7 @@ package race2;
 			return this.recode;
 		}
 		void printStates() {
-			System.out.println("¿Ã∏ß:"+name+"±‚∑œ:"+recode+"√ :");
+			System.out.println("Ïù¥Î¶Ñ:"+name+"Í∏∞Î°ù:"+recode+"Ï¥à");
 		}
 	}
+	

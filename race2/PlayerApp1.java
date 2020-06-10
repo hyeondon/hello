@@ -1,6 +1,6 @@
 package race2;
 
-import java.util.Scanner;
+import java.util.Scanner;import sun.net.www.content.text.plain;
 
 public class PlayerApp1 {
 	public static void main(String[] args) {
@@ -10,10 +10,10 @@ public class PlayerApp1 {
 		for(int i=0; i<player1s.length; i++) {
 			Player1 playaer1 = new Player1();
 			
-			System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.println("ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš”: ");
 			playaer1.setName(scanner.next());
 			
-			System.out.println("100M ±â·Ï: ");
+			System.out.println("100M ê¸°ë¡: ");
 			playaer1.setRecode(scanner.nextInt());
 			
 			player1s[i] = playaer1;
@@ -21,5 +21,19 @@ public class PlayerApp1 {
 		for(int i=0; i<player1s.length; i++) {
 			player1s[i].printStates();
 		}
+		Player1[] ranking = new Player1[3];
+		if(player1s[0].getRecode() < player1s[1].getRecode()) {
+			if(player1s[0].getRecode() < player1s[2].getRecode()) {
+				ranking[0] = player1s[0];
+			}else {
+				ranking[0] = player1s[2];
+			}
+		}
+		else {
+			if(player1s[0].getRecode() < player1s[2].getRecode()) {
+				ranking[0] = player1s[1];
+				}
+			}
+			System.out.println("1ë“±ì€ " +ranking[0].getName());
 	}
 }
