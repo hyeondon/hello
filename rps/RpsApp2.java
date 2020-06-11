@@ -37,15 +37,20 @@ public class RpsApp2 {
 		}else {result = "무승부";}
 
 		String rpsP = "";
-		if(player == 1 ) { rpsP = "가위";
-		}else if(player == 2) { rpsP = "바위";
-		}else{rpsP = "보";}
+		switch(player) {
+		case 1 : rpsP = "가위"; break;
+		case 2 : rpsP = "바위"; break;
+		case 3 : rpsP = "보"; break;
+		}
 		
 		String rpsC = "";
-		if(computer ==1 ) { rpsC = "가위";
-		}else if(computer ==2) { rpsC = "바위";
-		}else{rpsC = "보";}
-	
+		switch(computer) {
+		case 1 : rpsC = "가위"; break;
+		case 2 : rpsC = "바위"; break;
+		case 3 : rpsC = "보"; break;
+		}
+		
+		System.out.println("**********************");
 		System.out.println("플레이어:"+ rpsP);
 		System.out.println("컴퓨터:"+ rpsC);
 		System.out.println("플레이어:"+ result);
