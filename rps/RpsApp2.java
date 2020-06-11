@@ -26,7 +26,8 @@ public class RpsApp2 {
 		int player = scanner.nextInt();
 		int computer = random.nextInt(3)+1;
 		String result = "";
-		
+//		System.out.println(">>>> 플레이어:"+ player);
+//		System.out.println(">>>> 컴퓨터:"+ computer);
 		if(player ==1 && computer ==2) {result = "패배";
 		}else if (player == 1 && computer == 3) {result = "승리";
 		}else if (player == 2 && computer == 1) {result = "승리";
@@ -36,14 +37,14 @@ public class RpsApp2 {
 		}else {result = "무승부";}
 
 		String rpsP = "";
-		if(player ==1 ) { rpsP = "가위";
-		}else if(player ==2) { rpsP = "바위";
+		if(player == 1 ) { rpsP = "가위";
+		}else if(player == 2) { rpsP = "바위";
 		}else{rpsP = "보";}
 		
 		String rpsC = "";
-		if(player ==1 ) { rpsC = "가위";
-		}else if(player ==2) { rpsC = "바위";
-		}else{rpsP = "보";}
+		if(computer ==1 ) { rpsC = "가위";
+		}else if(computer ==2) { rpsC = "바위";
+		}else{rpsC = "보";}
 	
 		System.out.println("플레이어:"+ rpsP);
 		System.out.println("컴퓨터:"+ rpsC);
