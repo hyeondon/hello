@@ -1,6 +1,6 @@
-package race2;
+package race;
 
-import java.util.Scanner;import sun.net.www.content.text.plain;
+import java.util.Scanner;
 
 public class PlayerApp1 {
 	public static void main(String[] args) {
