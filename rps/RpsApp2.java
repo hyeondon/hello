@@ -16,10 +16,11 @@ public class RpsApp2{
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 		while(true) {
-			System.out.println("메뉴: 0.종료 1.게임");
+			System.out.println("메뉴 1.시작 0.종료");
 			switch(scanner.nextInt()) {
-			case 0: System.out.println("종료");return;
-			case 1: game(scanner,random);break;
+			case 0: System.out.println("게임 종료");return;
+			case 1: game( scanner,random);break;
+			
 			}
 		}
 	}
