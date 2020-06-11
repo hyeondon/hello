@@ -22,7 +22,7 @@ public class RpsApp {
 		System.out.println("1.가위 2.바위 3.보");
 		
 		int player = scanner.nextInt();
-		int computer = random.nextInt(3);
+		int computer = random.nextInt(3)+1; // 1,2,3
 		String result = "";
 		
 		if(player == 1 && computer == 1) {
@@ -31,10 +31,10 @@ public class RpsApp {
 			result = "패배";
 		}else if (player ==1 && computer == 3) {  
 			result = "승리";
-		}else if (player ==0 && computer == 1) {  
-			result = "에러";
-		}else if (player ==1 && computer == 0) {  
-			result = "에러";
+//		}else if (player ==0 && computer == 1) {  
+//			result = "에러";
+//		}else if (player ==1 && computer == 0) {  
+//			result = "에러";
 		}
 		
 		if(player == 2 && computer == 2) { 
@@ -43,10 +43,10 @@ public class RpsApp {
 			result = "패배";
 		}else if (player ==2 && computer == 3) {
 			result = "승리";
-		}else if (player ==0 && computer == 2) {  
-			result = "에러";
-		}else if (player ==2 && computer == 0) {  
-			result = "에러";
+//		}else if (player ==0 && computer == 2) {  
+//			result = "에러";
+//		}else if (player ==2 && computer == 0) {  
+//			result = "에러";
 		}
 		
 		if(player == 3 && computer == 3) { 
@@ -55,10 +55,10 @@ public class RpsApp {
 			result = "패배";
 		}else if (player ==3 && computer == 2) { 
 			result = "승리";
-		}else if (player ==0 && computer == 3) {  
-			result = "에러";
-		}else if (player ==3 && computer == 0) {  
-			result = "에러";
+//		}else if (player ==0 && computer == 3) {  
+//			result = "에러";
+//		}else if (player ==3 && computer == 0) {  
+//			result = "에러";
 		}
 		
 		System.out.println("플레이어:"+ player);
@@ -68,9 +68,3 @@ public class RpsApp {
 	
 }
 
-//if(score >= 90) grade = "A";
-//else if(score >= 80) {grade = "B";}
-//else if(score >= 70) {grade = "C";}
-//else if(score >= 60) {grade = "D";}
-//else if(score >= 50) {grade = "E";}
-//else {grade = "F";}
