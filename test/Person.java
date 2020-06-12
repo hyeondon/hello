@@ -6,6 +6,6 @@ package test;
 		float height;
 
 		void printStates() {
-			System.out.println("ÀÌ¸§: "+name+",³ªÀÌ: "+age+",Å°: "+height);
+			System.out.println("이름: "+name+",나이: "+age+"키: "+height);
 		}
 	} 
