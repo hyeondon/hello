@@ -1,6 +1,5 @@
 package merber;
 
-import java.util.Scanner;
 
 public class MemberServicesImpl implements MemberService{
 	private Member[] members;
