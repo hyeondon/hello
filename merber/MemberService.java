@@ -6,3 +6,4 @@ public interface MemberService {
 		public Member[] list();
 	}
 
+ 

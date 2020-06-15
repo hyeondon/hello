@@ -12,7 +12,7 @@ public class SampleApp {
 			switch(scanner.nextInt()) {
 			case 0 : System.out.println("종료");return;
 			case 1 : 
-				sample = new Sample();
+				sample = new Sample();//객체
 				System.out.println("회원가입");
 				System.out.println("아이디: ");
 				sample.setUserid(scanner.next());
@@ -20,7 +20,7 @@ public class SampleApp {
 				sample.setPassword(scanner.next());
 				System.out.println("이름: ");
 				sample.setName(scanner.next());
-				sampleService.join(sample);
+				sampleService.join(sample); //요소 
 				break;
 				
 			case 2 : 
