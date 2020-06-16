@@ -49,7 +49,7 @@ public class SampleServiceImpl implements SampleService{
 	}
 
 	@Override // 아이디 검색
-	public String Searchid(Sample sample) {
+	public String searchid(Sample sample) {
 		System.out.println("검색할 아이디: "+sample.getUserid());
 		String result = "아이디 없음";
 		for(int i=0; i<count; i++) {
@@ -61,7 +61,7 @@ public class SampleServiceImpl implements SampleService{
 	}
 
 	@Override // 회원탈퇴
-	public String Cntid(Sample sample) {
+	public String cntid(Sample sample) {
 		System.out.println("회원탈퇴 아이디 입력: ");
 		int idx = -1;
 		String delid = sample.getUserid();
@@ -88,14 +88,31 @@ public class SampleServiceImpl implements SampleService{
 	}
 
 	@Override // 전체회원 검색 
-	public Sample[] Flist() {
-		return Flist();
+	public Sample[] flist() {
+		return flist();
 	}
 
-	@Override
+	@Override // 마이페이지
 	public String mypage(Sample sample) {
-		System.out.println("아이디 :"+sample.getUserid());
+		
 		return null;
+	}
+
+	@Override // 비밀번호 변경 
+	public String changepw(Sample sample) {
+		System.out.println("아이디 입력: "+sample.getUserid());
+		String result ="없는 아이디 입니다";
+		for(int i=0; i<count; i++) {
+			if(sample.getUserid().equals(samples[i].getUserid())) {
+				result ="아이디 있음";
+				System.out.println("비밀번호 입력: "+sample.getPassword());
+				String resultpw ="기존 비밀번호를 입력하세요.";
+				for(int j=0; j<count; j++) {
+					if(sample.getPassword().equals(samples[i].getPassword()));
+				}
+			}
+		}
+		return result;
 	}
 }
 
