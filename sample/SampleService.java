@@ -1,16 +1,26 @@
 package sample;
 
 public interface SampleService {
+	//회원가입
 	public void join(Sample sample);         
+	//로그인
 	public String login(Sample sample);
+	//회원목록
 	public Sample[] list();
+	//아이디 체크
 	public String existid(Sample sample);
-	public String searchid(Sample sample);   // 아이디검색
-	public String cntid(Sample sample);      // 회원탈퇴
-	public String namesearch(Sample sample); // 이름검색
-	public Sample[] flist();                 // 전체 회원수
-	public String mypage(Sample sample);     // 마이페이지
-	public String changepw(Sample sample);   // 비밀번호 변경 
+	//아이디 검색
+	public String searchid(Sample sample);  
+	//회원탈퇴
+	public String cntid(Sample sample);    
+	//이름검색
+	public String namesearch(Sample sample); 
+	//전체회원수
+	public Sample[] flist();                
+	//마이페이지
+	public String mypage(Sample sample);    
+	//비밀번호 변경
+	public String changepw(Sample sample);  
 }
 /*
  * 요구사항 (기능정의)
