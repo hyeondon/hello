@@ -1,14 +1,35 @@
-package phone;
+package one;
 
 import java.util.Scanner;
-
 
 /**
  @author qpwlxm123@gmail.com 
  @since 2020.06.18
  @param kind 종류, company 제조사, call 통화내역
  */
-class BelPhone{
+class Prouduct{
+
+}
+
+class Tv extends Prouduct{
+	public final static String KIND = "텔레비전";
+	@Override public String toString() {return String.format("%s",KIND);}
+};
+class colorTv extends Tv{
+	public final static String KIND = "컬러티비";
+	@Override public String toString() {return String.format("%s", KIND);}
+}
+
+class Computer extends Prouduct{
+	public final static String KIND = "컴퓨터";
+	@Override public String toString() {return String.format("%s", KIND);}
+}
+
+class Notebook extends Computer{
+	public final static String KIND = "노트북";
+	@Override public String toString() {return String.format("%s", KIND);}
+}
+class BelPhone extends Prouduct{
 	protected String kind, company, call;
 	
 	public String getKind() {return kind;}
@@ -48,15 +69,10 @@ class CelPhone extends BelPhone{
 }
 class Iphon extends CelPhone{
 	public final static String KIND = "아이폰";
-	protected String search;
-	
-	public String getSearch() {return search;}
-	public void setSearch(String search) {this.search = search;}
 	//[애플] 아이폰을 사용해서 [이동]중에 [뉴스 검색] 을 한다.
 	@Override
 	public String toString() {
-		return String.format("%s 아이폰을 사용해서 %s 제품을 사용해서 %s 한다", 
-				KIND, company, move, search);
+		return String.format("%s", KIND);
 
 	}
 }
@@ -64,58 +80,38 @@ class GalPhone extends Iphon{
 	protected String pay;
 	//[삼성] 갤럭시 제품을 사용해서, [이동]중에 [삼성페이결제] 한다.
 	public final static String KIND = "갤럭시";
-	public String getPay() {return pay;}
-	public void setPay(String pay) {this.pay = pay;}
 	@Override
 	public String toString() {
-		return String.format("%s 갤럭시 제품을 사용해서, %s 중에 %s 한다.", 
-				KIND, company, move, pay);
+		return String.format("%s",KIND);
 	
 	}
 }
-public class Phone { 
+public class Etland { 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		BelPhone phone = null;
-		BelPhone[] arr = new BelPhone[1];
-		CelPhone cel = null;
-		Iphon iphone = null;
-		GalPhone galPhone = null;
+		Prouduct item = null;
+		Prouduct[] cart = new Prouduct[5];
+		int index = 0;
 		while(true) {
-			System.out.println("0.종료 1.집전화걸기 2.전화받기 3.휴대폰걸기 4.아이폰서치"
-					+ "5.삼성페이결제" );
+			System.out.println("쇼핑목록: 0.종료 1.아이폰 2.갤럭시 3.컬러TV 4.컴퓨터"
+					+ " 5.노트북 6.쇼핑목록보기" );
 			switch (scanner.nextInt()) {
 			case 0: return;
 			case 1: 
-				phone = new BelPhone();
-				phone.setKind("집전화");	
-				phone.setCompany("금성사");
-				phone.setCall("안녕하세요");
-				arr[0] = phone;
-				break;
+				cart[index] = (Iphon)new Iphon(); index++; break;
 			case 2:
-				System.out.println(arr[0].toString());
-				break;
+				cart[index] = (GalPhone)new GalPhone(); index++; break;
 			case 3 :
-				cel = new CelPhone();
-				cel.setCompany("노키아");
-				cel.setPortable(true);
-				cel.setCall("이동중에 통화하고 있다.");
-				arr[0] = cel;
-				break;
+				cart[index] = (colorTv)new colorTv(); index++; break;
 			case 4 : 
-				iphone = new Iphon();
-				iphone.setCompany("애플");
-				iphone.setPortable(true);
-				iphone.setSearch("뉴스 검색");
-				arr[0] = iphone;
-				break;
-			case 5 :
-				galPhone = new GalPhone();
-				galPhone.setCompany("갤럭시");
-				galPhone.setPortable(true);
-				galPhone.setPay("삼성페이결제");
-				arr[0] = galPhone;
+				cart[index] = (Computer)new Computer(); index++; break;
+			case 5 : 
+				cart[index] = (Notebook) new Notebook(); index++; break;
+			case 6 : 
+				System.out.println("구매목록");
+					for(Prouduct p : cart) {
+						System.out.println(p.toString());
+					}
 				break;
 			default:
 				break;
