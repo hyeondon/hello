@@ -1,4 +1,4 @@
-package one;
+package test;
 
 import java.util.Scanner;
 
@@ -7,11 +7,11 @@ import java.util.Scanner;
  @since 2020.06.18
  @param kind 종류, company 제조사, call 통화내역
  */
-class Prouduct{
 
+class Product{
+	
 }
-
-class Tv extends Prouduct{
+class Tv extends Product{
 	public final static String KIND = "텔레비전";
 	@Override public String toString() {return String.format("%s",KIND);}
 };
@@ -20,7 +20,7 @@ class colorTv extends Tv{
 	@Override public String toString() {return String.format("%s", KIND);}
 }
 
-class Computer extends Prouduct{
+class Computer extends Product{
 	public final static String KIND = "컴퓨터";
 	@Override public String toString() {return String.format("%s", KIND);}
 }
@@ -29,7 +29,7 @@ class Notebook extends Computer{
 	public final static String KIND = "노트북";
 	@Override public String toString() {return String.format("%s", KIND);}
 }
-class BelPhone extends Prouduct{
+class BelPhone extends Product{
 	protected String kind, company, call;
 	
 	public String getKind() {return kind;}
@@ -89,8 +89,8 @@ class GalPhone extends Iphon{
 public class Etland { 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Prouduct item = null;
-		Prouduct[] cart = new Prouduct[5];
+		Product item = null;
+		Product[] cart = new Product[5];
 		int index = 0;
 		while(true) {
 			System.out.println("쇼핑목록: 0.종료 1.아이폰 2.갤럭시 3.컬러TV 4.컴퓨터"
@@ -109,7 +109,7 @@ public class Etland {
 				cart[index] = (Notebook) new Notebook(); index++; break;
 			case 6 : 
 				System.out.println("구매목록");
-					for(Prouduct p : cart) {
+					for(Product p : cart) {
 						System.out.println(p.toString());
 					}
 				break;
