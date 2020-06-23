@@ -1,4 +1,4 @@
-package practice;
+package week1one;
 
 public class Dog {
 	String name;

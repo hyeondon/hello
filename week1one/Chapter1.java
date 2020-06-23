@@ -1,4 +1,4 @@
-package practice;
+package week1one;
 
 public class Chapter1 {
 	public static void main(String[] args) {

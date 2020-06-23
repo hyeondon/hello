@@ -1,4 +1,4 @@
-package practice;
+package week1one;
 
 import java.io.BufferedReader;
 import java.io.IOException;

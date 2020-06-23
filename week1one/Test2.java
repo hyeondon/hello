@@ -1,4 +1,4 @@
-package practice;
+package week1one;
 // 최대값 / 최소값 구하기
 public class Test2 {
 	public static void main(String[] args) {

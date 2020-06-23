@@ -1,4 +1,4 @@
-package practice;
+package week1one;
 
 import java.util.Scanner;
 //실습: 국어, 영어, 수학 점수 받아서 총점, 평균 출력하기

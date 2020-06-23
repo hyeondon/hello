@@ -1,6 +1,4 @@
-package practice;
-
-
+package week1one;
 
 // 내림차순 정렬하기
 public class Test3 {

@@ -1,4 +1,4 @@
-package one;
+package Oop;
 
 /**
  * 요구사항 (기능정의)
