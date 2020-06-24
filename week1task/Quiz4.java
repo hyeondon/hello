@@ -12,10 +12,10 @@ package week1task;
   Member m2 = sm;
   m2.hello(); // 안녕하세요 스패설멤버홍길동입니다
  */
-class Inheritance3 {
+class Quiz4 {
 		String grade;
 		String name;
-		public Inheritance3(String name) {
+		public Quiz4(String name) {
 			this.name = name;
 		}
 		public String getName() {return name;}
@@ -26,7 +26,7 @@ class Inheritance3 {
 			System.out.printf("안녕하세요 %s입니다.%n",name);
 		}
 	}
-	class SpecialMember extends Inheritance3{
+	class SpecialMember extends Quiz4{
 		int specialPoint;
 		public int getSpecialPoint() {
 			return specialPoint;
@@ -39,20 +39,6 @@ class Inheritance3 {
 		}
 		public void hello() {
 			System.out.printf("안녕하세요 스페셜멤버 %s입니다.%n",name);
-		}
-	}
-	public class Merber {
-		public static void main(String[] args) {
-			Inheritance3 m = new Inheritance3("김길동");
-			m.setGrade("3");
-			m.hello();
-			
-			SpecialMember sm = new SpecialMember("홍길동");
-			sm.setGrade("1");
-			sm.setSpecialPoint(100);
-			
-			Inheritance3 m2 = sm;
-			m2.hello();
 		}
 	}
 
