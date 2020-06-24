@@ -63,12 +63,12 @@ class Anima{
 			}
 		}
 	}
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) { // 재 정의
 		if(obj != null && obj instanceof Anima) {
 			return this.type ==((Anima)obj).type && this.name == ((Anima)obj).name; 
 		}else {
 		}
-		return false;
+		return false; 
 	}
 	public String toString() {
 		return "나는 "+this.type +"이고 이름은 "+ this.name+ "이 입니다.";
