@@ -1,5 +1,7 @@
 package week1task;
 
+import week1task.Members;
+import week1task.SpecialMember;
 
 /**
  * 실습: SpecialMember, Member를설계하시오
@@ -12,10 +14,10 @@ package week1task;
   Member m2 = sm;
   m2.hello(); // 안녕하세요 스패설멤버홍길동입니다
  */
-class Quiz4 {
+class Members {
 		String grade;
 		String name;
-		public Quiz4(String name) {
+		public Members(String name) {
 			this.name = name;
 		}
 		public String getName() {return name;}
@@ -26,7 +28,7 @@ class Quiz4 {
 			System.out.printf("안녕하세요 %s입니다.%n",name);
 		}
 	}
-	class SpecialMember extends Quiz4{
+	class SpecialMember extends Members{
 		int specialPoint;
 		public int getSpecialPoint() {
 			return specialPoint;
@@ -41,6 +43,21 @@ class Quiz4 {
 			System.out.printf("안녕하세요 스페셜멤버 %s입니다.%n",name);
 		}
 	}
+	public class Quiz4 {
+		public static void main(String[] args) {
+			Members m = new Members("김길동");
+			m.setGrade("3");
+			m.hello();
+			
+			SpecialMember sm = new SpecialMember("홍길동");
+			sm.setGrade("1");
+			sm.setSpecialPoint(100);
+			
+			Members m2 = sm;
+			m2.hello();
+		}
+	}
+	
 
 
 
