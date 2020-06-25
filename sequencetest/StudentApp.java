@@ -1,4 +1,4 @@
-package test;
+package sequencetest;
 
 import java.util.Scanner;
 public class StudentApp{
