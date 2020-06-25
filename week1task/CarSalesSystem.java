@@ -41,10 +41,6 @@ import java.awt.Point;
  * */
 import java.util.Scanner;
 
-import javax.swing.event.ChangeListener;
-import javax.swing.text.Caret;
-import javax.swing.text.JTextComponent;
-
 class Car{
 	 int id; // 차량번호
 	 public int getId() {
@@ -71,7 +67,7 @@ class Car{
 	
 }
 
-class Name extends Car{
+class Name extends Car{ // 고객정보
 	String name; // 고객명
 	public void setName(String name) {
 		this.name = name;
@@ -89,15 +85,35 @@ class Name extends Car{
 	}
 	
 }
-
+class CarSales extends Car{ // 판매차량
+	int carsalesid;
+	public int getCarsalesid() {
+		return carsalesid;
+	}
+	public void setCarsalesid(int carsalesid) {
+		this.carsalesid = carsalesid;
+	}
+}
+class NameidSales extends Name{ // 판매고객
+	int nameidsales;
+	
+	public void setNameidsales(int nameidsales) {
+		this.nameidsales = nameidsales;
+	}
+	public int getNameidsales() {
+		return nameidsales;
+	}
+}
 
 public class CarSalesSystem {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Car[] cars = new Car[100]; // 차량
 		Name[] people = new Name[100];// 고객
-		int cacaca = 0;
-		int count = 0; 
+		CarSales[] sales = new CarSales[100]; //판매차량
+		NameidSales[] salesid = new NameidSales[100]; //판매고객
+		int count = 0; // 차량 체크
+		int cnt = 0; // 고객 체크
 		while (true) {
 			System.out.println("메뉴>> 0.나가기 1.차량등록 2.고객등록 3.차량조회 4.고객조회 5.차량판매 ");
 			switch(scanner.nextInt()) {
@@ -105,24 +121,25 @@ public class CarSalesSystem {
 			case 1 : 
 				     Car car = new Car(); // 차량정보
 					 System.out.println("차량등록 입니다.");
-				     System.out.println("차량번호:");
-				     int caca = 0;
-				     car.setId(scanner.nextInt());
+					 System.out.println("차량번호:");
+					 car.setId(scanner.nextInt());
 				     System.out.println("차량크기: 소형(1)|중형(2)|대형(3)");
 				     car.setSize(scanner.nextInt());
 				     System.out.println("차량타입: 세단(1)|SUV(2)");
 				     car.setType(scanner.nextInt());
-				     for(int i=0; i<cars.length; i++) {
-				    	 if(cars[i].getId() == cars[i].getId()) {
-				    		 System.out.println("차량번호가 중복됩니다.");
-				     }
-				    	 }
 				     cars[count] = car;
 				     count++;
+				     for(int i=0; i<count-1; i++) {
+				    	 if(car.getId() == cars[i].getId()) {
+				    		 System.out.println("중복된 차량번호 입니다.");
+				    		 count--;
+				    	 }else {
+				    		 System.out.println("등록완료");
+				    	 }
+				     }
 				     break;
 			case 2 : 
 					 Name name = new Name(); // 고객정보
-					 int cnt = 0;
 					 System.out.println("고객등록 입니다.");
 					 System.out.println("고객번호:");
 					 name.setNameid(scanner.nextInt());
@@ -130,20 +147,31 @@ public class CarSalesSystem {
 					 name.setName(scanner.next());
 					 people[cnt] = name;
 					 cnt++;
+					 
 					break;
 			case 3 : System.out.println("차량조회 입니다.");
 			 	 	 for(int j=0; j<count; j++) {
-			 	 		 System.out.printf("차량번호: %d%n 차량크기: %d%n 차량타입: %d%n",
+			 	 		 System.out.printf("차량번호: %d%n 차량크기소형(1)|중형(2)|대형(3): %d%n 차량타입세단(1)|SUV(2): %d%n",
 			 	 				 cars[j].getId(),cars[j].getSize(),cars[j].getType());
 			 	 	 }
 			 	 		 break;
-			case 4 :System.out.println("고객조회");
-			        for(int i=0; i<count; i++) {
+			case 4 :
+					System.out.println("고객조회");
+			        for(int i=0; i<cnt; i++) {
 			        	System.out.printf(" 고객번호: %d 고객명: %s%n", 
 			        			people[i].getNameid(),people[i].getName());
+			        	
 			        }
 			        break;
-			case 5 : break;
+			case 5 : 
+				     CarSales carSales = new CarSales();
+				     NameidSales nameidSales = new NameidSales();
+				 	 System.out.println("차량판매 입니다");
+				     System.out.println("고객번호를 등록하세요[0:취소]");
+				     nameidSales.setNameid(scanner.nextInt());
+				     System.out.println("차량번호를 등록하세요[0:취소]");
+				     
+				break;
 			}
 		}
 	}
