@@ -11,6 +11,7 @@ class Customer{
 }
 
 class EnteAdm{
+	
 	static int count;
 	static final int maxCnt = 100;
 	static Customer[] custs = new Customer[maxCnt];
